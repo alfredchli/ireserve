@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title></title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="admin.js"></script>
+		<link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+		<div id="login-pane" class="login-pane">
+			<div class="form" style="text-align:center">
+				<span class="pane-header">LOGIN</span><br/><br/>
+				<form id="login_form" class="login-form" method="post" target="admin.php">
+					<input type="text" name="username" placeholder="username" style="width:100%"/>
+					<input type="password" name="password" placeholder="password" style="width:100%"/>
+					<button id="login_submit" style="width:100%" type="button">submit</button>
+				</form>	
+			</div>
+		</div>
+		<div id="admin-pane" class="admin-pane" style="display:none">
+			<div class="form" style="text-align:left;">
+			<span class="pane-header">RESERVATION</span><br/><br/>
+			<form method="post">
+				<div id="model">
+					<span>Filter the reservation list by model:&nbsp;</span>
+					<input name="model" type="radio" value="0" />&nbsp;16 GB&nbsp;&nbsp;
+					<input name="model" type="radio" value="1" />&nbsp;32 GB&nbsp;&nbsp;
+					<input name="model" type="radio" value="2" />&nbsp;64 GB&nbsp;&nbsp;
+					<input name="model" type="radio" value="3" />&nbsp;128 GB&nbsp;&nbsp;
+					<input name="model" type="radio" value="4" checked="checked" />&nbsp;ALL
+				</div>
+                <br />
+				<button id="search_submit">submit</button>
+			</form>
+			</div>
+		</div>
+    </body>
+</html>

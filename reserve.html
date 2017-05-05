@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reserve and Pick Up</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="reserve.js"></script>
+</head>
+<body>
+    <div class="form">
+        <span class="pane-header">Pineapple Store - Reserve and Pick Up</span>
+	    <form name="reserve" method="post" action="order.php">
+		    <div id="retail_store">
+			    <div class="section-header">Select Retail Store</div>
+			    <div>Choose the Retail Store that you want to pick up the reservatons products.</div><br/>
+			    <select name="rStore">
+				    <option value="0" selected="selected">0. Please select a retail store&nbsp;</option>
+				    <option value="1">1. ifc mall</option>
+				    <option value="2">2. Mongkok</option>
+				    <option value="3">3. Shatin</option>
+			    </select>
+		    </div>
+		    <div id="model">
+			    <div class="section-header">Select Model</div>
+			    <input name="model" type="radio" value="0" checked="true" />&nbsp;16 GB<br/>
+			    <input name="model" type="radio" value="1" />&nbsp;32 GB<br/>
+			    <input name="model" type="radio" value="2" />&nbsp;64 GB<br/>
+			    <input name="model" type="radio" value="3" />&nbsp;128 GB
+		    </div>
+		    <div id="contact">
+			    <div class="section-header">Your Contact</div>
+			    <input name="fname" placeholder="First Name"/><br/>
+			    <input name="lname" placeholder="Last Name"/><br/>
+			    <input name="remail" placeholder="Email"/><br/>
+			    <input name="rphone" placeholder="Phone"/><br/>
+		    </div>
+            <br />
+		    <button type="reset">reset</button>&nbsp;<button id="reserve_submit" type="button">submit</button>
+	    </form>
+    </div>
+</body>
+</html>
